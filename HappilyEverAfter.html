@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏖️🌸💓💎💭🎶</title>
+
+
+    <meta name="description" content="Myspacemark - Happily Ever After">
+
+    <link rel="icon" href="hea32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="hea180.png" sizes="180x180">
+
+    <meta property="og:title" content="🏖️🌸💓💎💭🎶">
+    <meta property="og:description" content="Myspacemark - Happily Ever After">
+    <meta property="og:image" content="bck.jpg">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            height: 100svh;
+
+            background-color: rgb(255, 255, 255);
+
+            overflow: hidden;
+
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+
+        }
+
+        #back {
+
+            width: 100vw;
+            height: auto;
+            /* filter: blur(1px); */
+            position: absolute;
+            z-index: 0;
+
+            filter: blur(3px);
+
+
+
+
+        }
+
+        #trans {
+            position: absolute;
+            width: 25vw;
+            bottom: 0;
+            right: 5vw;
+
+            filter: blur(1px);
+
+            z-index: 2;
+
+
+        }
+
+        #center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cover {
+            z-index: 1;
+            width: 20vw;
+            /* border: 1vw solid #0012af; */
+            border-radius: 1vw;
+
+
+
+
+
+        }
+
+        #pause {
+            width: 15vw;
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        @keyframes pulseSwing {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+
+
+
+            50% {
+                transform: scale(1.05) rotate(0deg);
+            }
+
+
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        @keyframes swing {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            /* rotate right */
+            75% {
+                transform: rotate(-5deg);
+            }
+
+            /* rotate left */
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+
+
+
+        #links {
+
+            position: absolute;
+
+
+            left: 5vw;
+
+            display: flex;
+            flex-direction: row;
+
+
+            z-index: 2;
+
+
+
+
+        }
+
+        #links div {
+            width: 10vw;
+            height: 10vw;
+
+
+
+
+            transition: transform 0.5s;
+            background-size: cover;
+        }
+
+
+        #links div:hover {
+            transform: scale(1.1);
+
+
+
+
+        }
+
+        #links div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #name {
+            position: absolute;
+
+            top: 5svh;
+            left: -14vw;
+            color: rgb(245, 245, 245);
+
+            letter-spacing: -1vw;
+
+            font-size: 10vw;
+            scale: 0.4 1;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        #plane {
+            position: absolute;
+            width: 25vw;
+            top: -10svh;
+            left: 10vw;
+
+            filter: blur(1px);
+            opacity: 0;
+
+            pointer-events: none;
+
+        }
+
+
+
+        @keyframes moveLR {
+            0% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(90vw) translateY(30svh);
+            }
+
+            /* move right */
+
+
+            /* back to start */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse {
+            animation: pulse 0.8s ease-in-out;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+
+                justify-content: space-around;
+                align-items: center;
+
+            }
+
+            #back {
+                height: 100svh;
+                width: auto;
+            }
+
+
+            #cover {
+                position: absolute;
+                width: 60vw;
+                border-radius: 10vw;
+            }
+
+            #pause {
+                position: absolute;
+                width: 50vw;
+
+            }
+
+            #name {
+                position: relative;
+                top: auto;
+                left: auto;
+                font-size: 25vw;
+
+                width: 200vw;
+                text-align: center;
+            }
+
+            #links {
+                position: relative;
+                left: auto;
+                bottom: auto;
+            }
+
+            #links div {
+                width: 25vw;
+                height: 25vw;
+            }
+
+            #trans {
+                display: none;
+                width: 50vw;
+                bottom: 0;
+                right: 0;
+
+
+            }
+
+            #plane {
+                position: absolute;
+                width: 50vw;
+                top: 0svh;
+                left: -10vw;
+
+                filter: blur(1px);
+                opacity: 0;
+
+
+            }
+
+
+
+            @keyframes moveLR {
+                0% {
+                    transform: translateX(0);
+                    opacity: 0;
+                }
+
+                10% {
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateX(90vw) translateY(10svh);
+                }
+
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio id="track" loop src="Happily Ever After/jet lagged.mp3"></audio>
+
+    <!-- <img id="back" src="bck.jpg" alt=""> -->
+    <video id="back" loop autoplay playsinline muted src="backreverse.mp4"></video>
+
+    <img id="trans" src="x1.png" alt="">
+    <img id="plane" src="plane.png" alt="">
+
+    <!-- <p id="name">Happily Ever After</p> -->
+
+    <div id="center">
+        <img id="cover" onclick="playstop()" src="hpea.jpeg" alt="">
+        <img id="pause" src="paus.png" alt="">
+    </div>
+
+
+    <!-- <div id="links">
+            <div><a target="_blank" href="https://www.instagram.com/myspacemark555/"><img src="i.png" alt=""></a></div>
+            <div><a target="_blank"
+                    href="https://open.spotify.com/album/4k1nuqmH9WB8Vsb4fWgsAL?si=GCABQMNhTTCj1X6diNS4rg"><img src="sp.png"
+                        alt=""></a></div>
+            <div><a target="_blank" href="https://on.soundcloud.com/owZMf7SNtSY21gJjS1"><img src="soun.png" alt=""></a>
+            </div>
+        </div> -->
+
+
+
+
+</body>
+
+<script>
+    audio = document.getElementById("track")
+    pause = document.getElementById("pause")
+    cover = document.getElementById("cover");
+    plane = document.getElementById("plane");
+    trans = document.getElementById("trans");
+
+    back = document.getElementById("back");
+
+    let playing = false;
+
+    
+
+    cover.style.animation = 'pulseSwing 4s infinite ease-in-out';
+    plane.style.animation = 'moveLR 15s infinite linear';
+
+    cover.style.animationPlayState = 'paused';
+    plane.style.animationPlayState = 'paused';
+
+    back.pause();
+    back.playbackRate = 0.8;
+
+    back.addEventListener('click', () => {
+        window.open('https://open.spotify.com/album/4k1nuqmH9WB8Vsb4fWgsAL?si=GCABQMNhTTCj1X6diNS4rg', '_blank'); // replace with your link
+    });
+
+
+
+   
+
+    document.body.addEventListener('keydown', (e) => {
+        if (e.code === 'Space') {
+            playstop();
+        }
+
+    });
+
+    function playstop() {
+        if (playing) {
+            audio.pause();
+            pause.style.display = "block";
+
+            cover.style.animationPlayState = 'paused';
+            plane.style.animationPlayState = 'paused';
+
+            boomerangRunning = false;
+            back.pause();
+
+
+            stopSlideshow();
+
+        } else {
+            audio.play();
+            audio.currentTime = 19;
+            pause.style.display = "none";
+
+            cover.style.animationPlayState = 'running';
+            plane.style.animationPlayState = 'running';
+
+
+
+            back.play();
+
+            startSlideshow();
+
+        }
+        playing = !playing;
+    }
+
+    const images = [
+        "x1.png",
+        "x2.png",
+        "x3.png"
+    ];
+
+    let index = 0;
+    let intervalId = null;
+
+
+    function switchpic() {
+        index = (index + 1) % images.length; // loop back after last image
+        trans.src = images[index];
+
+        trans.classList.remove("pulse");
+        void trans.offsetWidth; // forces reflow so animation can restart
+        trans.classList.add("pulse");
+    }
+
+    // change every 1 second (1000 ms)
+    function startSlideshow() {
+        if (!intervalId) { // only start if not already running
+            intervalId = setInterval(switchpic, 1400);
+        }
+    }
+
+    // Stop the slideshow
+    function stopSlideshow() {
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+
+</script>
+
+</html>
